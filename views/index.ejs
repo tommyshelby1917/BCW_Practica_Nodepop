@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <h2>Te damos la bienvenida a <%= title %>
+  </h2>
+  <h2>tu portal de compra y venta de confianza!</h3>
+
+    <h3>Resultados</h3>
+    <p>
+      <% resultados.forEach(post=> {%>
+        <div>
+          <h5>Name: <%=post.name %>
+          </h5>
+          <h5>Precio: <%=post.price %>€
+          </h5>
+          <%});%>
+    </p>
+</body>
+
+</html>

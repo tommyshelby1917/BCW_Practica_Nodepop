@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "name": "Bicicleta",
+      "sale": true,
+      "price": 230.15,
+      "photo": "bici.jpeg",
+      "tags": [
+        "lifestyle",
+        "motor"
+      ]
+    },
+    {
+      "name": "iPhone 3GS",
+      "sale": false,
+      "price": 50,
+      "photo": "iphone.jpeg",
+      "tags": [
+        "lifestyle",
+        "mobile"
+      ]
+    }
+  ]
+}
