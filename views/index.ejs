@@ -16,16 +16,56 @@
   </h2>
   <h2>tu portal de compra y venta de confianza!</h3>
 
-    <h3>Resultados</h3>
-    <p>
+    <!-- Search form -->
+    <div class="search-container">
+      <div class="search-title">
+        <h2>Busca un anuncio</h2>
+      </div>
+      <div class="search-form">
+        <form action="/" method="get">
+          <label for="name">Buscar anuncio por nombre</label>
+          <input type="text" name="name" id="name">
+          <label for="name">Buscar anuncio por precio</label>
+          <input type="text" name="price" id="price">
+          <label for="tag">Buscar anuncio por tag</label>
+          <input type="text" name="tag" id="tag">
+          <label class="sale-label "for="sale">En venta</label>
+          <input data-val="true" value="true" type="checkbox" name="sale" id="sale">
+          <button class="search-button "type="submit">Buscar anuncio</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Results box -->
+    <div class="results-main-container">
+      <div class="resultados-title">
+            <h3>Resultados</h3>
+      </div>
       <% resultados.forEach(post=> {%>
-        <div>
-          <h5>Name: <%=post.name %>
-          </h5>
-          <h5>Precio: <%=post.price %>€
-          </h5>
-          <%});%>
-    </p>
+      <!-- Individual result box -->
+      <div class="individual-box-container">
+        <h5>
+          <% if(post.sale==true) {%>
+            Se vende
+          <%} else {%>
+            Se busca
+          <%}%>
+        </h5>
+        <h5>
+          Name: <%=post.name %>
+        </h5>
+        <h5>
+          Precio: <%=post.price %>€
+        </h5>
+        <div class="img-container">
+          <img class="img-post" src="images/posts/<%=post.photo %>" alt="">
+        </div>
+        <h5>
+          Tags: <%=post.tags %>
+        </h5>
+      </div>
+      <%});%>
+    </div>
 </body>
 
 </html>
