@@ -23,13 +23,47 @@ sudo mkdir -p /data/db
 
 Si eres un usuario de MacOS, recuerda que tendrás que permitir la apertura de MongoDB, verificando su desarrollador desde la pestanya de Seguridad en Preferencias del Sistema.
 
-## ¿Qué tengo que hacer para arrancar el proyecto en modo de desarollo?
+## ¿Qué tengo que hacer para arrancar la aplicación?
 
 ```sh
-npm run dev
+npm start
 ```
 
 Si todo ha ido bien veremos el siguiente mensaje en consola
+
 ```sh
 'The application NODEAPI its now connected to a DATABASE (MongoDB)!'
 ```
+
+y entonces podremos empezar a usar la aplicación.
+
+## ¿De qué manera puedo utilitzar la API de Nodepop?
+
+Tenemos dos manera de visualizar los resultados que nos devuelve nuestra API.
+1) En el frontpage -> localhost:3000
+2) En un JSON -> localhost:3000/api/posts
+
+## ¿Cómo hago una consulta a la API de Nodepop?
+
+Hay que pasarle uno o más parámetros configurados para la API, en la query a la URL. Por ejemplo:
+
+1) En el frontpage -> localhost:3000/?price=50
+2) En un JSON -> localhost:3000/api/posts?price=50
+
+En este caso se mostraria los anuncios que su precio se igual a 50.
+
+## ¿Qué parametros acepta la API de Nodemon?
+- Podemos filtrar los anuncios por
+  - Nombre: /api/posts?name=bicicleta
+  - Tag: /api/posts?tag=motor
+  - Venta / Compra: /api/posts?sale=true
+  - Precio: /api/posts?price=50
+- También están disponibles las siguientes funcionalidades:
+  - Skip: /api/posts?skip=1
+    - Ignorar la cantidad de anuncios que le pasemos en la query.
+  - Select: /api/posts/?select=name
+    - Muestra solo los campos del schema que le pasemos en la query. En este caso solo enseñaría el nombre de cada anuncio.
+  - Sort: /api/posts/?sort=price
+    - Ordena los anuncios por el campo que le indiquemos en la query. En este caso ordenaria la respuesta por el precio de manera ascendente.
+  - Limit: /api/posts/?limit=2
+    - Muestra un numero máximo de anuncios. En este caso sólo mostraria 2 anuncios.
