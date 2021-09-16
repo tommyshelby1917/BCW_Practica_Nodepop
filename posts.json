@@ -19,6 +19,15 @@
         "lifestyle",
         "mobile"
       ]
+    },
+    {
+      "name": "Seat Ibiza",
+      "sale": true,
+      "price": 6000,
+      "photo": "coche.jpeg",
+      "tags": [
+        "motor"
+      ]
     }
   ]
 }

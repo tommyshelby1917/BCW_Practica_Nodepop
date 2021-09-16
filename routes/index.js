@@ -15,7 +15,7 @@ router.get('/', async function (req, res, next) {
   const [filtro, select, skip, sort, limit] = getters.getPosts(req);
 
   res.locals.resultados = await Post.list(filtro, select, skip, sort, limit);
-  res.render('index', { title: 'Nodepop' });
+  res.render('index', { title: 'NODEPOP' });
 });
 
 module.exports = router;
