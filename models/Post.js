@@ -14,7 +14,7 @@ const postSchema = mongoose.Schema({
   tags: [String] // Array of strings
 });
 
-postSchema.statics.list = function (filter, skip, select, sort, limit) {
+postSchema.statics.list = function (filter, select, skip, sort, limit) {
   const query = Post.find(filter);
   query.select(select);
   query.skip(skip);
