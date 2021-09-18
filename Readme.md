@@ -44,6 +44,7 @@ npm start
 
   1) En el frontpage -> localhost:3000
   2) En un JSON -> localhost:3000/api/posts
+  3) Podemos obtener la lista de tags en -> localhost:3000/api/posts/tags
 
 ## ¿Cómo hago una consulta a la API de Nodepop?
 
@@ -69,3 +70,12 @@ En este caso se mostraria los anuncios que su precio se igual a 50.
     - Ordena los anuncios por el campo que le indiquemos en la query. En este caso ordenaria la respuesta por el precio de manera ascendente.
   - Limit: /api/posts/?limit=2
     - Muestra un numero máximo de anuncios. En este caso sólo mostraria 2 anuncios.
+
+## ¿Cómo podemos publicar un anuncio?
+  - Podemos hacer un post a nuestra API, incluyendo en el cuerpo el siguiente esqueleto. Todos los campos son requeridos:
+    - name (String)
+    - sale (Boolean)
+    - price (Number)
+    - photo (String)
+    - tags (Array)
+
