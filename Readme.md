@@ -1,4 +1,6 @@
+# Josep Miquel Arenas Beltran - Keepcoding
 # Nodepop
+# Node.js / MongoDB / Express
 
 ## ¿Qué és Nodepop?
 
@@ -53,14 +55,16 @@ npm start
   1) En el frontpage -> localhost:3000/?price=50
   2) En un JSON -> localhost:3000/api/posts?price=50
 
-En este caso se mostraria los anuncios que su precio se igual a 50.
-
 ## ¿Qué parametros acepta la API de Nodemon?
 - Podemos filtrar los anuncios por
   - Nombre: /api/posts?name=bicicleta
   - Tag: /api/posts?tag=motor
   - Venta / Compra: /api/posts?sale=true
   - Precio: /api/posts?price=50
+    - 10-50: Buscará anuncios con un precio entre 10€ i 50€
+    - 50-: Buscará anuncios con un precio mayor que 50€
+    - -50: Buscará anuncios con un precio menor que 50€
+    - 50: Buscará anuncios con un precio exacto de 50€
 - También están disponibles las siguientes funcionalidades:
   - Skip: /api/posts?skip=1
     - Ignorar la cantidad de anuncios que le pasemos en la query.
@@ -78,4 +82,5 @@ En este caso se mostraria los anuncios que su precio se igual a 50.
     - price (Number)
     - photo (String)
     - tags (Array)
+
 
