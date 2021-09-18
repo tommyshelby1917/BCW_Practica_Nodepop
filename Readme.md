@@ -1,9 +1,12 @@
 # Nodepop
 
+## ¿Qué és Nodepop?
+
+- Nodepop es un servicio de compra y venta de artículos online, donde existe la posibilidad de poder filtrar anuncios por: nombre, precios y su rango, tag, si está alguien está interesado en comprarlo o venderlo.
 
 ## Inicializar la base de datos
 
-Para borrar posible contenido que se haya creado anteriormente y **reinicializar la base de datos** puedes ejectuar el siguiente comando:
+- Para borrar posible contenido que se haya creado anteriormente y **reinicializar la base de datos** puedes ejectuar el siguiente comando:
 
 ```sh
 npm run initDB
@@ -11,7 +14,7 @@ npm run initDB
 
 ## ¿Cómo arrancar MongoDB en Mac y Linux?
 
-**Descargamos MongoDB desde su página oficial**, descomprimimos el archivo y dentro de la carpeta descomprimida ejecutamos los siguientes comandos:
+- **Descargamos MongoDB desde su página oficial**, descomprimimos el archivo y dentro de la carpeta descomprimida ejecutamos los siguientes comandos:
 
 ```sh
 sudo mkdir -p /data/db
@@ -21,7 +24,7 @@ sudo mkdir -p /data/db
 
 ## La APP mongod no se puede abrir porque no se puede verificar el desarrollador
 
-Si eres un usuario de MacOS, recuerda que tendrás que permitir la apertura de MongoDB, verificando su desarrollador desde la pestanya de Seguridad en Preferencias del Sistema.
+- Si eres un usuario de MacOS, recuerda que tendrás que permitir la apertura de MongoDB, verificando su desarrollador desde la pestanya de Seguridad en Preferencias del Sistema.
 
 ## ¿Qué tengo que hacer para arrancar la aplicación?
 
@@ -29,26 +32,25 @@ Si eres un usuario de MacOS, recuerda que tendrás que permitir la apertura de M
 npm start
 ```
 
-Si todo ha ido bien veremos el siguiente mensaje en consola
+- Si todo ha ido bien veremos el siguiente mensaje en consola y entonces podremos empezar a usar la aplicación.
 
-```sh
-'The application NODEAPI its now connected to a DATABASE (MongoDB)!'
-```
+  ```sh
+  'The application NODEAPI its now connected to a DATABASE (MongoDB)!'
+  ```
 
-y entonces podremos empezar a usar la aplicación.
+## ¿De qué manera puedo utilitzar la API de Nodepop y cuales son sus rutas disponibles?
 
-## ¿De qué manera puedo utilitzar la API de Nodepop?
+- Tenemos dos manera de visualizar los resultados que nos devuelve nuestra API:
 
-Tenemos dos manera de visualizar los resultados que nos devuelve nuestra API.
-1) En el frontpage -> localhost:3000
-2) En un JSON -> localhost:3000/api/posts
+  1) En el frontpage -> localhost:3000
+  2) En un JSON -> localhost:3000/api/posts
 
 ## ¿Cómo hago una consulta a la API de Nodepop?
 
-Hay que pasarle uno o más parámetros configurados para la API, en la query a la URL. Por ejemplo:
+- Hay que pasarle uno o más parámetros configurados para la API, en la query a la URL. Por ejemplo:
 
-1) En el frontpage -> localhost:3000/?price=50
-2) En un JSON -> localhost:3000/api/posts?price=50
+  1) En el frontpage -> localhost:3000/?price=50
+  2) En un JSON -> localhost:3000/api/posts?price=50
 
 En este caso se mostraria los anuncios que su precio se igual a 50.
 

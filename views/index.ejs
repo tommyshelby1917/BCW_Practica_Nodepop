@@ -45,8 +45,27 @@
             <input type="text" name="name" id="name">
             <label for="name">Buscar anuncio por precio</label>
             <input type="text" name="price" id="price">
+            <div class="info-prices-container">
+              <p class="info-prices">10-50: Buscará anuncios con un precio entre 10€ i 50€</p>
+              <p class="info-prices">10-: Buscará anuncios con un precio mayor que 10€</p>
+              <p class="info-prices">-10: Buscará anuncios con un precio menor que 10€</p>
+              <p class="info-prices">10: Buscará anuncios con un precio exacto de 10€</p>
+            </div>
             <label for="tag">Buscar anuncio por tag</label>
-            <input type="text" name="tag" id="tag">
+            <select name="tag" id="tag">
+              <option value="">Todos los tags</option>
+              <option value="work">work</option>
+              <option value="lifestyle">lifestyle</option>
+              <option value="motor">motor</option>
+              <option value="mobile">mobile</option>
+            </select>
+            <label for="sort">Ordenar por:</label>
+            <select name="sort" id="sort">
+              <option value="name">Nombre</option>
+              <option value="price">Precio</option>
+            </select>
+            <label for="limit">Límite de anuncios</label>
+            <input type="number" name="limit" id="limit">
             <label class="sale-label "for="sale">En venta</label>
             <input data-val="true" value="true" type="checkbox" name="sale" id="sale">
             <button class="search-button "type="submit">Buscar anuncio</button>

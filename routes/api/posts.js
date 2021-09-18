@@ -22,6 +22,31 @@ router.get('/', async (req, res, next) => {
   }
 })
 
+router.get('/tags', async (req, res, next) => {
+
+  try {
+    const [filtro, select, skip, sort, limit] = getters.getPosts(req);
+
+    const posts = await Post.list(filtro, select, skip, sort, limit); // getPosts[0] > Filter, getPosts[1] > Select
+
+    let tags = [];
+
+    posts.forEach((e) => {
+      e.tags.forEach((e) => {
+        if (!tags.includes(e)) {
+          tags.push(e);
+        }
+      })
+    });
+
+    res.json({ results: tags });
+
+  } catch (error) {
+    next(error);
+  }
+})
+
+
 router.post('/', async (req, res, next) => {
   try {
 

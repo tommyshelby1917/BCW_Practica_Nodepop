@@ -62,6 +62,10 @@ label {
   margin-top: 30px;
 }
 
+.info-prices {
+  color: rgb(124, 124, 124);
+}
+
 .results-main-container {
   background-color: #fff6de;
   padding: 2rem;
